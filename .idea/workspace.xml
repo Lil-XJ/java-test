@@ -1,34 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="" />
+    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SnakeGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/Constructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/Fibonacci.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/Maze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/MonkeyEatPeach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/ObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/object/TowerOfHanoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/debug/Debug01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/extend_/Extend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/override/Override.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/WorkManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSysAPP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSysOOP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/test/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/test/Homework03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/project/test/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/www/IntDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/www/YangHui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/www/helloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/www/input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/test/www/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/variable/ChangeChar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/variable/JavaDoc.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3I7gN8GUiFYByxIyUxFcNrAIFtk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ChangeChar.executor": "Run",
+    "Application.Constructor.executor": "Run",
+    "Application.Fibonacci.executor": "Run",
+    "Application.IntDetail.executor": "Run",
+    "Application.Maze.executor": "Run",
+    "Application.MonkeyEatPeach.executor": "Run",
+    "Application.ObjectTest.executor": "Run",
+    "Application.SnakeGame.executor": "Run",
+    "Application.TowerOfHanoi.executor": "Run",
+    "Application.YangHui.executor": "Run",
+    "Application.helloWorld.executor": "Run",
+    "Application.input.executor": "Run",
+    "Application.test.executor": "Run",
+    "Application.variableDemo.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "qoder.settings.plugin",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.Constructor.executor": "Run",
+    "应用程序.Debug01.executor": "Debug",
+    "应用程序.Extend.executor": "Run",
+    "应用程序.Homework01.executor": "Run",
+    "应用程序.Homework03.executor": "Run",
+    "应用程序.Maze.executor": "Debug",
+    "应用程序.Override.executor": "Run",
+    "应用程序.SmallChangeSys.executor": "Run",
+    "应用程序.SmallChangeSysAPP.executor": "Run",
+    "应用程序.WorkManagement.executor": "Debug"
   }
 }]]></component>
+  <component name="RunManager" selected="应用程序.Homework03">
+    <configuration name="Debug01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pkg.debug.Debug01" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pkg.debug.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.test.Homework01" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.test.Homework03" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmallChangeSys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.smallChange.SmallChangeSys" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.smallChange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmallChangeSysAPP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.smallChange.SmallChangeSysAPP" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.smallChange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Homework03" />
+        <item itemvalue="应用程序.Homework01" />
+        <item itemvalue="应用程序.SmallChangeSysAPP" />
+        <item itemvalue="应用程序.SmallChangeSys" />
+        <item itemvalue="应用程序.Debug01" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,11 +199,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1787120981424</updated>
-      <workItem from="1787120982495" duration="2000" />
+      <workItem from="1787120982495" duration="2597000" />
+      <workItem from="1787124478813" duration="5169000" />
+      <workItem from="1787186271761" duration="1426000" />
+      <workItem from="1787191825981" duration="4091000" />
+      <workItem from="1787272190941" duration="3987000" />
+      <workItem from="1787278938233" duration="2656000" />
+      <workItem from="1787292672829" duration="4828000" />
+      <workItem from="1787362336996" duration="1725000" />
+      <workItem from="1787369764716" duration="11159000" />
+      <workItem from="1787551116320" duration="1628000" />
+      <workItem from="1787626436671" duration="3165000" />
+      <workItem from="1787637592517" duration="4949000" />
+      <workItem from="1787647487200" duration="4231000" />
+      <workItem from="1787715742540" duration="2747000" />
+      <workItem from="1787728864180" duration="8322000" />
+      <workItem from="1787738689190" duration="1893000" />
+      <workItem from="1787795061713" duration="82000" />
+      <workItem from="1787795152871" duration="4422000" />
+      <workItem from="1787800642266" duration="4357000" />
+      <workItem from="1787821911661" duration="947000" />
+      <workItem from="1787900279337" duration="1760000" />
+      <workItem from="1787904201575" duration="2557000" />
+      <workItem from="1788146774533" duration="2308000" />
+      <workItem from="1788334050956" duration="3112000" />
+      <workItem from="1788339704901" duration="3288000" />
+      <workItem from="1788420362924" duration="1797000" />
+      <workItem from="1788424620074" duration="4109000" />
+      <workItem from="1788500835381" duration="1338000" />
+      <workItem from="1788507439560" duration="8068000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

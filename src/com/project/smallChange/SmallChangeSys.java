@@ -1,2 +1,66 @@
-package com.project.smallChange;public class SmallChangeSys {
+package com.project.smallChange;
+
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class SmallChangeSys {
+    public static void main(String[] args) {
+        boolean loop = true;
+        Scanner scanner = new Scanner(System.in);
+        String key = "";
+        String details = "\t\t-------零钱通明细------";
+        double money = 0;
+        double balance = 0;
+        Date date = null;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        do {
+            System.out.println("\n\t\t======零钱通菜单======");
+            System.out.println("\t\t\t 1 零钱通明细");
+            System.out.println("\t\t\t 2 收益入账");
+            System.out.println("\t\t\t 3 消费");
+            System.out.println("\t\t\t 4 退出");
+
+            System.out.println("请输入你的选择：");
+            key = scanner.next();
+            switch(key){
+                case "1":
+                    System.out.println(details);break;
+                case "2":
+                    System.out.println("收益入账金额：");
+                    money = scanner.nextDouble();
+                    balance += money;
+                    date = new Date();
+                    details += "\n" + "收益入账\t+" + money + "\t" + balance + "\t" + format.format(date);
+                    break;
+                case "3":
+                    System.out.println("消费金额：");
+                    money = scanner.nextDouble();
+                    System.out.println("消费说明：");
+                    String remark = scanner.next();
+                    balance -= money;
+                    date = new Date();
+                    details += "\n" + remark + "\t-" + money + "\t" + balance + "\t" + format.format(date);
+                    break;
+                case "4":
+                    String choice;
+                    while (true){
+                        System.out.println("你确定要退出吗？y/n");
+                        choice = scanner.next();
+                        if(choice.equals("y") || choice.equals("n")){
+                            break;
+                        }
+                    }
+                    if(choice.equals("y")){
+                        loop = false;
+                    }else{
+                        continue;
+                    }
+                    break;
+                default:
+                    System.out.println("输入有误，请重新输入");
+            }
+        } while (loop);
+    }
 }

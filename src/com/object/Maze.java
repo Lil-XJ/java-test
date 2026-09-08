@@ -1,4 +1,4 @@
-package object;
+package com.object;
 
 public class Maze {
     public static void main(String[] args) {

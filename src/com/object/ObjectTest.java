@@ -1,7 +1,6 @@
-package object;
+package com.object;
 
 import java.util.Scanner;
-import java.util.function.Function;
 
 public class ObjectTest {
     public static void main(String[] args) {

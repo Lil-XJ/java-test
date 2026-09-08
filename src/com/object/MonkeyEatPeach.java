@@ -1,4 +1,4 @@
-package object;
+package com.object;
 
 public class MonkeyEatPeach {
     public static void main(String[] args) {
