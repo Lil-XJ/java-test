@@ -5,43 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SnakeGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/Constructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/Fibonacci.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/Maze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/MonkeyEatPeach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/ObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/object/TowerOfHanoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/Package.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/debug/Debug01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/extend_/Extend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/override/Override.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/WorkManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pkg/poly/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSysAPP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/smallChange/SmallChangeSysOOP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/test/Homework01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/test/Homework03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/project/test/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/www/IntDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/www/YangHui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/www/helloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/www/input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/test/www/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/variable/ChangeChar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/variable/JavaDoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codeBlock/CodeBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/innerClass/InnerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interface01/Interface01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/interface01/MyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,7 +34,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="3I7gN8GUiFYByxIyUxFcNrAIFtk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -90,7 +59,10 @@
     "Application.variableDemo.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -101,13 +73,15 @@
     "project.structure.last.edited": "SDK",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "qoder.settings.plugin",
+    "settings.editor.selected.configurable": "configurable.group.editor",
     "vue.rearranger.settings.migration": "true",
     "应用程序.Constructor.executor": "Run",
     "应用程序.Debug01.executor": "Debug",
     "应用程序.Extend.executor": "Run",
     "应用程序.Homework01.executor": "Run",
     "应用程序.Homework03.executor": "Run",
+    "应用程序.InnerClass.executor": "Run",
+    "应用程序.Interface01.executor": "Run",
     "应用程序.Maze.executor": "Debug",
     "应用程序.Override.executor": "Run",
     "应用程序.SmallChangeSys.executor": "Run",
@@ -115,13 +89,13 @@
     "应用程序.WorkManagement.executor": "Debug"
   }
 }]]></component>
-  <component name="RunManager" selected="应用程序.Homework03">
-    <configuration name="Debug01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pkg.debug.Debug01" />
+  <component name="RunManager" selected="应用程序.InnerClass">
+    <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.test.Homework01" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.pkg.debug.*" />
+          <option name="PATTERN" value="com.project.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,8 +129,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmallChangeSys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.project.smallChange.SmallChangeSys" />
+    <configuration name="Homework03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.test.Homework03" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InnerClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.innerClass.InnerClass" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.innerClass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Interface01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.interface01.Interface01" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.interface01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmallChangeSysAPP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.smallChange.SmallChangeSysAPP" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
@@ -181,15 +194,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SmallChangeSys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.smallChange.SmallChangeSys" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.smallChange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.InnerClass" />
+      <item itemvalue="应用程序.Interface01" />
+      <item itemvalue="应用程序.Homework01" />
+      <item itemvalue="应用程序.Homework03" />
+      <item itemvalue="应用程序.SmallChangeSysAPP" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.InnerClass" />
+        <item itemvalue="应用程序.Interface01" />
         <item itemvalue="应用程序.Homework03" />
         <item itemvalue="应用程序.Homework01" />
         <item itemvalue="应用程序.SmallChangeSysAPP" />
-        <item itemvalue="应用程序.SmallChangeSys" />
-        <item itemvalue="应用程序.Debug01" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -228,6 +269,10 @@
       <workItem from="1788424620074" duration="4109000" />
       <workItem from="1788500835381" duration="1338000" />
       <workItem from="1788507439560" duration="8068000" />
+      <workItem from="1788916601435" duration="2813000" />
+      <workItem from="1788949719326" duration="2000" />
+      <workItem from="1789466047500" duration="590000" />
+      <workItem from="1789522192661" duration="2296000" />
     </task>
     <servers />
   </component>
