@@ -7,9 +7,9 @@
           <value>
             <TabSessionState>
               <option name="provider" value="claude" />
-              <option name="sessionId" value="78400d2b-5c74-40e8-b1dc-4940ee3412ed" />
+              <option name="sessionId" value="7f4715a3-7885-4f5c-94c0-c81a541e2ede" />
               <option name="cwd" value="D:\desktop\java-test" />
-              <option name="model" value="claude-sonnet-4-7[1m]" />
+              <option name="model" value="claude-sonnet-4-7" />
               <option name="permissionMode" value="default" />
             </TabSessionState>
           </value>
