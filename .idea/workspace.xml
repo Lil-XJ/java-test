@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(java): 添加枚举和作业练习相关功能&#10;&#10;- 新增 Enumeration 类演示枚举特性和星期枚举定义&#10;- 添加 Homework02 到 Homework08 系列作业练习类&#10;- 实现抽象类 Animal 及其子类 Cat 和 Dog 的继承关系&#10;- 创建接口 Calculator 和匿名类实现计算器功能&#10;- 添加内部类 A 和 B 的嵌套类访问演示&#10;- 实现交通工具工厂模式和依赖注入示例&#10;- 创建温度控制汽车类 Car 及其内部类 Air&#10;- 添加颜色枚举 Color 实现接口 IC 的功能&#10;- 更新 IDEA 工作空间配置以支持新的运行配置&#10;- 在 claudeCodeTabState.xml 中更新会话 ID 信息">
-      <change afterPath="$PROJECT_DIR$/src/com/arrayExercise/ArrayExercise01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/arrayExercise/CollectionExercise01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/set_/hashSetStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/wrapper/Wrapper.java" afterDir="false" />
+    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置">
+      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/generic_/Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/generic_/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/junit/JUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/map_/Map_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/exception/Exception01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/exception/Exception01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +75,11 @@
     "Application.input.executor": "Run",
     "Application.test.executor": "Run",
     "Application.variableDemo.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Homework01.testList.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -88,7 +96,7 @@
     "project.structure.last.edited": "SDK",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.selected.configurable": "qoder.settings.plugin",
     "vue.rearranger.settings.migration": "true",
     "应用程序.ArrayExercise01.executor": "Run",
     "应用程序.CollectionExercise01.executor": "Run",
@@ -97,6 +105,8 @@
     "应用程序.Enumeration.executor": "Run",
     "应用程序.Exception01.executor": "Run",
     "应用程序.Extend.executor": "Run",
+    "应用程序.Generic (1).executor": "Run",
+    "应用程序.Generic.executor": "Run",
     "应用程序.Homework01.executor": "Run",
     "应用程序.Homework02.executor": "Run",
     "应用程序.Homework03.executor": "Run",
@@ -107,6 +117,7 @@
     "应用程序.Homework08.executor": "Run",
     "应用程序.InnerClass.executor": "Run",
     "应用程序.Interface01.executor": "Run",
+    "应用程序.Map_.executor": "Debug",
     "应用程序.Maze.executor": "Debug",
     "应用程序.Override.executor": "Run",
     "应用程序.SmallChangeSys.executor": "Run",
@@ -114,16 +125,17 @@
     "应用程序.WorkManagement.executor": "Debug",
     "应用程序.Wrapper.executor": "Run",
     "应用程序.com.enumeration.Homework03.executor": "Run",
+    "应用程序.com.generic_.Homework01.executor": "Run",
     "应用程序.hashSetStructure.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="应用程序.hashSetStructure">
-    <configuration name="ArrayExercise01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.arrayExercise.ArrayExercise01" />
+  <component name="RunManager" selected="JUnit.Homework01.testList">
+    <configuration name="Generic (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.generic_.Generic" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.arrayExercise.*" />
+          <option name="PATTERN" value="com.generic_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionExercise01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.arrayExercise.CollectionExercise01" />
+    <configuration name="Generic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.generic_.Generic" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.arrayExercise.*" />
+          <option name="PATTERN" value="com.generic_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,13 +156,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exception01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.exception.Exception01" />
+    <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
       <module name="java-test" />
-      <option name="PROGRAM_PARAMETERS" value="1 2 &quot;&quot;" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.exception.*" />
+          <option name="PATTERN" value="com.generic_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,12 +169,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Wrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wrapper.Wrapper" />
+    <configuration name="com.generic_.Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wrapper.*" />
+          <option name="PATTERN" value="com.generic_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,33 +182,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hashSetStructure" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.set_.hashSetStructure" />
+    <configuration name="Homework01.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.set_.*" />
+          <option name="PATTERN" value="com.generic_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.generic_" />
+      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="应用程序.hashSetStructure" />
-      <item itemvalue="应用程序.ArrayExercise01" />
-      <item itemvalue="应用程序.CollectionExercise01" />
-      <item itemvalue="应用程序.Wrapper" />
-      <item itemvalue="应用程序.Exception01" />
+      <item itemvalue="JUnit.Homework01.testList" />
+      <item itemvalue="应用程序.com.generic_.Homework01" />
+      <item itemvalue="应用程序.Generic (1)" />
+      <item itemvalue="应用程序.Generic" />
+      <item itemvalue="应用程序.Homework01" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.hashSetStructure" />
-        <item itemvalue="应用程序.CollectionExercise01" />
-        <item itemvalue="应用程序.ArrayExercise01" />
-        <item itemvalue="应用程序.Wrapper" />
-        <item itemvalue="应用程序.Exception01" />
+        <item itemvalue="JUnit.Homework01.testList" />
+        <item itemvalue="应用程序.com.generic_.Homework01" />
+        <item itemvalue="应用程序.Homework01" />
+        <item itemvalue="应用程序.Generic (1)" />
+        <item itemvalue="应用程序.Generic" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +285,8 @@
     <MESSAGE value="feat(java): 添加代码块、内部类和接口相关功能&#10;&#10;- 新增 CodeBlock 类用于演示代码块特性&#10;- 实现 InnerClass 类展示内部类和匿名类的使用方式&#10;- 添加 Interface01 和 MyInterface 展示接口的默认方法特性&#10;- 更新项目配置文件以支持新的运行配置&#10;- 配置 IDEA 工作空间以适应新增的 Java 文件结构" />
     <MESSAGE value="feat: 添加初始Java类文件&#10;&#10;- 创建Fina1主类并实现Hello World输出功能&#10;- 定义A和B两个辅助类结构&#10;- 初始化基本的Java程序框架" />
     <MESSAGE value="feat(java): 添加枚举和作业练习相关功能&#10;&#10;- 新增 Enumeration 类演示枚举特性和星期枚举定义&#10;- 添加 Homework02 到 Homework08 系列作业练习类&#10;- 实现抽象类 Animal 及其子类 Cat 和 Dog 的继承关系&#10;- 创建接口 Calculator 和匿名类实现计算器功能&#10;- 添加内部类 A 和 B 的嵌套类访问演示&#10;- 实现交通工具工厂模式和依赖注入示例&#10;- 创建温度控制汽车类 Car 及其内部类 Air&#10;- 添加颜色枚举 Color 实现接口 IC 的功能&#10;- 更新 IDEA 工作空间配置以支持新的运行配置&#10;- 在 claudeCodeTabState.xml 中更新会话 ID 信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(java): 添加枚举和作业练习相关功能&#10;&#10;- 新增 Enumeration 类演示枚举特性和星期枚举定义&#10;- 添加 Homework02 到 Homework08 系列作业练习类&#10;- 实现抽象类 Animal 及其子类 Cat 和 Dog 的继承关系&#10;- 创建接口 Calculator 和匿名类实现计算器功能&#10;- 添加内部类 A 和 B 的嵌套类访问演示&#10;- 实现交通工具工厂模式和依赖注入示例&#10;- 创建温度控制汽车类 Car 及其内部类 Air&#10;- 添加颜色枚举 Color 实现接口 IC 的功能&#10;- 更新 IDEA 工作空间配置以支持新的运行配置&#10;- 在 claudeCodeTabState.xml 中更新会话 ID 信息" />
+    <MESSAGE value="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
