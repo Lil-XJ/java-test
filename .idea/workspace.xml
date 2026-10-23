@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置">
-      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/collections_/Homework03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/generic_/Generic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/generic_/Homework01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/junit/JUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/map_/Map_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
+    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +277,8 @@
     <MESSAGE value="feat: 添加初始Java类文件&#10;&#10;- 创建Fina1主类并实现Hello World输出功能&#10;- 定义A和B两个辅助类结构&#10;- 初始化基本的Java程序框架" />
     <MESSAGE value="feat(java): 添加枚举和作业练习相关功能&#10;&#10;- 新增 Enumeration 类演示枚举特性和星期枚举定义&#10;- 添加 Homework02 到 Homework08 系列作业练习类&#10;- 实现抽象类 Animal 及其子类 Cat 和 Dog 的继承关系&#10;- 创建接口 Calculator 和匿名类实现计算器功能&#10;- 添加内部类 A 和 B 的嵌套类访问演示&#10;- 实现交通工具工厂模式和依赖注入示例&#10;- 创建温度控制汽车类 Car 及其内部类 Air&#10;- 添加颜色枚举 Color 实现接口 IC 的功能&#10;- 更新 IDEA 工作空间配置以支持新的运行配置&#10;- 在 claudeCodeTabState.xml 中更新会话 ID 信息" />
     <MESSAGE value="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置" />
+    <MESSAGE value="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
