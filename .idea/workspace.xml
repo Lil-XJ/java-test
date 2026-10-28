@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object">
+    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="chore(IDE): 更新IDE配置文件中的会话ID和提交记录&#10;&#10;- 更新 claudeCodeTabState.xml 中的 sessionId 值&#10;- 修改 workspace.xml 中的变更列表注释为最新的提交信息&#10;- 更新 LAST_COMMIT_MESSAGE 为当前的作业练习提交内容">
+      <change afterPath="$PROJECT_DIR$/dev-log/DEV_LOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/draw/BallMove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/draw/DrawCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/thread/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/thread/Homework02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/thread/ThreadExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/thread/ThreadMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/Bomb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/EnemyTank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/MyPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/MyTank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/Shot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/Tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankGame/TankGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +95,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/desktop/java-test/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,12 +104,17 @@
     "project.structure.last.edited": "SDK",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "qoder.settings.plugin",
+    "settings.editor.selected.configurable": "qoder.settings.profile.models",
     "vue.rearranger.settings.migration": "true",
     "应用程序.ArrayExercise01.executor": "Run",
+    "应用程序.BallMove (1).executor": "Run",
+    "应用程序.BallMove (2).executor": "Run",
+    "应用程序.BallMove (3).executor": "Run",
+    "应用程序.BallMove.executor": "Run",
     "应用程序.CollectionExercise01.executor": "Run",
     "应用程序.Constructor.executor": "Run",
     "应用程序.Debug01.executor": "Debug",
+    "应用程序.DrawCircle.executor": "Run",
     "应用程序.Enumeration.executor": "Run",
     "应用程序.Exception01.executor": "Run",
     "应用程序.Extend.executor": "Run",
@@ -113,6 +135,10 @@
     "应用程序.Override.executor": "Run",
     "应用程序.SmallChangeSys.executor": "Run",
     "应用程序.SmallChangeSysAPP.executor": "Run",
+    "应用程序.Tank.executor": "Run",
+    "应用程序.TankGame.executor": "Run",
+    "应用程序.ThreadExercise.executor": "Run",
+    "应用程序.ThreadMethod.executor": "Run",
     "应用程序.WorkManagement.executor": "Debug",
     "应用程序.Wrapper.executor": "Run",
     "应用程序.com.enumeration.Homework03.executor": "Run",
@@ -120,39 +146,23 @@
     "应用程序.hashSetStructure.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.Homework01.testList">
-    <configuration name="Generic (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.generic_.Generic" />
-      <module name="java-test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.generic_.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Generic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.generic_.Generic" />
-      <module name="java-test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.generic_.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\desktop\java-test\src" />
+      <recent name="D:\desktop\java-test\out\production\java-test" />
+      <recent name="D:\desktop\java-test\out" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tankGame" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.TankGame">
     <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
+      <option name="MAIN_CLASS_NAME" value="com.thread.Homework01" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.generic_.*" />
+          <option name="PATTERN" value="com.thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,12 +170,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.generic_.Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
+    <configuration name="Homework02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thread.Homework02" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.generic_.*" />
+          <option name="PATTERN" value="com.thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,36 +183,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework01.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TankGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tankGame.TankGame" />
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.generic_.*" />
+          <option name="PATTERN" value="tankGame.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.generic_" />
-      <option name="MAIN_CLASS_NAME" value="com.generic_.Homework01" />
-      <option name="METHOD_NAME" value="testList" />
-      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thread.ThreadExercise" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thread.ThreadMethod" />
+      <module name="java-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.Homework01.testList" />
-      <item itemvalue="应用程序.com.generic_.Homework01" />
-      <item itemvalue="应用程序.Generic (1)" />
-      <item itemvalue="应用程序.Generic" />
       <item itemvalue="应用程序.Homework01" />
+      <item itemvalue="应用程序.Homework02" />
+      <item itemvalue="应用程序.ThreadExercise" />
+      <item itemvalue="应用程序.ThreadMethod" />
+      <item itemvalue="应用程序.TankGame" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Homework01.testList" />
-        <item itemvalue="应用程序.com.generic_.Homework01" />
+        <item itemvalue="应用程序.TankGame" />
+        <item itemvalue="应用程序.Homework02" />
         <item itemvalue="应用程序.Homework01" />
-        <item itemvalue="应用程序.Generic (1)" />
-        <item itemvalue="应用程序.Generic" />
+        <item itemvalue="应用程序.ThreadExercise" />
+        <item itemvalue="应用程序.ThreadMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +311,8 @@
     <MESSAGE value="feat(java): 添加枚举和作业练习相关功能&#10;&#10;- 新增 Enumeration 类演示枚举特性和星期枚举定义&#10;- 添加 Homework02 到 Homework08 系列作业练习类&#10;- 实现抽象类 Animal 及其子类 Cat 和 Dog 的继承关系&#10;- 创建接口 Calculator 和匿名类实现计算器功能&#10;- 添加内部类 A 和 B 的嵌套类访问演示&#10;- 实现交通工具工厂模式和依赖注入示例&#10;- 创建温度控制汽车类 Car 及其内部类 Air&#10;- 添加颜色枚举 Color 实现接口 IC 的功能&#10;- 更新 IDEA 工作空间配置以支持新的运行配置&#10;- 在 claudeCodeTabState.xml 中更新会话 ID 信息" />
     <MESSAGE value="feat(java): 添加集合操作和异常处理练习代码&#10;&#10;- 新增 ArrayExercise01 演示 ArrayList 基本操作和遍历&#10;- 添加 CollectionExercise01 展示泛型集合和迭代器使用&#10;- 创建 hashSetStructure 演示 HashSet 结构和对象去重&#10;- 更新 Exception01 添加多类型异常捕获处理&#10;- 新增 Wrapper 类用于包装类基础练习&#10;- 更新 IDE 配置文件以支持新的运行配置" />
     <MESSAGE value="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object" />
+    <MESSAGE value="chore(IDE): 更新IDE配置文件中的会话ID和提交记录&#10;&#10;- 更新 claudeCodeTabState.xml 中的 sessionId 值&#10;- 修改 workspace.xml 中的变更列表注释为最新的提交信息&#10;- 更新 LAST_COMMIT_MESSAGE 为当前的作业练习提交内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(IDE): 更新IDE配置文件中的会话ID和提交记录&#10;&#10;- 更新 claudeCodeTabState.xml 中的 sessionId 值&#10;- 修改 workspace.xml 中的变更列表注释为最新的提交信息&#10;- 更新 LAST_COMMIT_MESSAGE 为当前的作业练习提交内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,9 +7,9 @@
           <value>
             <TabSessionState>
               <option name="provider" value="claude" />
-              <option name="sessionId" value="0d3d6f6e-9ef4-457f-8314-936754a45dcc" />
+              <option name="sessionId" value="49f9207d-6b6f-4f85-86c5-0f6e2aac7b65" />
               <option name="cwd" value="D:\desktop\java-test" />
-              <option name="model" value="claude-haiku-4-5" />
+              <option name="model" value="claude-sonnet-4-7" />
               <option name="permissionMode" value="bypassPermissions" />
             </TabSessionState>
           </value>
