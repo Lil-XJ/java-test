@@ -1,5 +1,7 @@
 package tankGame;
 
+import java.util.Vector;
+
 /**
  * @author 连晓杰
  * @version 1.0
@@ -7,6 +9,7 @@ package tankGame;
  */
 public class MyTank extends Tank{
     public Shot shot = null;
+    Vector<Shot> shots = new Vector<>();
     public MyTank(int x, int y,int direct) {
         super(x, y,direct);
     }
@@ -25,6 +28,7 @@ public class MyTank extends Tank{
                 shot = new Shot(getX(), getY() + 20, 3);
                 break;
         }
+        shots.add(shot);
         new Thread(shot).start();
     }
 }

@@ -18,19 +18,27 @@ public class Tank {
     }
     public void moveUp(){
         this.setDirect(0);
-        this.setY(this.getY() - 10);
+        if(this.getY() > 0){
+            this.setY(this.getY() - 5);
+        }
     }
     public void moveDown(){
         this.setDirect(2);
-        this.setY(this.getY() + 10);
+        if(this.getY() < 500){
+            this.setY(this.getY() + 5);
+        }
     }
     public void moveLeft(){
         this.setDirect(3);
-        this.setX(this.getX() - 10);
+        if(this.getX() > 0){
+            this.setX(this.getX() - 5);
+        }
     }
     public void moveRight(){
         this.setDirect(1);
-        this.setX(this.getX() + 10);
+        if(this.getX() < 500){
+            this.setX(this.getX() + 5);
+        }
     }
 
     public int getDirect() {

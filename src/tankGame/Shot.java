@@ -9,7 +9,7 @@ public class Shot implements Runnable{
     int x;
     int y;
     int direct = 0;
-    int speed = 2;
+    int speed = 5;
     boolean isLive = true;
     public Shot(int x, int y, int direct) {
         this.x = x;
@@ -38,7 +38,7 @@ public class Shot implements Runnable{
                     x -= speed;
                     break;
             }
-            if(x < 0 || y < 0 || x > 1000 || y > 750){
+            if(x < 0 || y < 0 || x > 500 || y > 500){
                 isLive = false;
                 break;
             }

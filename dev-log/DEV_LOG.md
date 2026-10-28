@@ -241,3 +241,102 @@
 **关联**
 
 - 未提交；工作区改动：`src/tankGame/MyPanel.java`（同期还有把 `enemyTanks` 改 `static` 的编辑，非本次改动但已一并编译验证）
+
+---
+
+## 坦克游戏默认窗口 400x300 → 700x700 · 2026-10-28 10:46
+
+**做了什么 + 为什么**：`src/tankGame/TankGame.java` 的 `setSize(400, 300)` 改为 `setSize(700, 700)`。原窗口（去掉边框标题栏后可视区约 384x261）比坦克活动范围还小——`Tank.java` 的移动边界是 560（约 620x620 含坦克体积），坦克会开出可视区；700x700 的可视区约 684x661，刚好罩住整个活动范围。背景 `fillRect(0,0,1000,750)` 和子弹出界判定 1000x750 是更大的画布，暂时不动。
+
+**遗留**：`Tank.java` 的 560 边界、`MyPanel` 的 1000x750 背景、`Shot` 的 1000x750 出界三处尺寸常量不一致，应收敛成 `Tank`/常量类里的统一定义。
+
+**关联**：未提交
+
+---
+
+## 诊断「敌方打不中我方坦克」 · 2026-10-28 16:00
+
+**需求**
+
+排查为什么敌方子弹永远打不中玩家：`MyPanel.hitMyTank` 的判交写法看着没问题，实战中却一次都没中过。
+
+**改动**
+
+无代码改动（纯诊断）。临时写了个无 GUI 验证程序（`HitTest`，跑完即删）做模拟。
+
+**设计原因 / 权衡**
+
+结论：AABB 命中判定本身没坏，问题在「敌人根本没机会把子弹对上玩家」+「就算中了玩家也不会死」。
+
+1. 主因：`EnemyTank.run()` 的移动 switch 少了 `break`（`src/tankGame/EnemyTank.java:37-75`）→ fall-through，每次循环实际走一整条 L 形路线（每段固定 30 步 × 5px = 150px），且 case 3 的 `moveLeft` 永远最后执行，敌方开火点的 x 只会向左漂、y 向下沉，最后全贴左/下边缘。所有开火点落在稀疏固定网格上，正好绕开玩家初始位置 (250,400)。
+2. 即使命中也没有表现：`hitTank`（`src/tankGame/MyPanel.java:236`）是按「我方子弹打敌方」写的——`enemyTanks.remove(enermy)` 对 myTank 是空操作（myTank 不在 enemyTanks 里），命中只置 `myTank.isLive=false` + 生成 Bomb。但 `paint`（MyPanel.java:40）无条件画 myTank 不判 `isLive`，`keyPressed`（MyPanel.java:277-289）也不判，坦克照常显示照常动；更糟的是 `hitMyTank` 里 `if(myTank.isLive && shot.isLive)`（MyPanel.java:254）让玩家第一发之后永久免疫。表现上就是「打不中」。
+3. 顺带：`EnemyTank.java:31` 朝左开火的出膛点写成 `getX() + 60`（车尾），应为 `getX()`（炮口），复制 case 1 的笔误；开火频率受 `shots.size() == 0` 限制，一个敌人 3~12 秒才开一枪。
+
+**验证**
+
+javac 21 编译 `src/tankGame/*` + 临时 HitTest，headless 运行三组模拟：
+
+1. 子弹正对 myTank 飞（x=268 向下）→ `hitMyTank` 判中（isLive=false）：判交链路是通的。
+2. 开局三发子弹（x=118/218/318 向下）vs 静止 (250,400)：打不中。
+3. 按 `EnemyTank.run()` 原样（含 fall-through）模拟 6000 次开火：轨迹能碰到 (250,400) 的 **0 次**。竖直弹列 x ∈ {18, 68, 118, 168, 218, 318}（要命中需 x∈[245,290]），水平弹行 y ∈ {178, 328, 478, 518}（要命中需 y∈[395,460]），每条都差 18~67px。
+
+**遗留 / 待办**
+
+待修复（方案待确认）：EnemyTank switch 补 `break`（并把固定 30 步改随机步长，破掉网格）；case 3 出膛点改 `getX()`；myTank 被击中要有表现（不再绘制 / 停止操作 / Game Over 或复活制）。
+另：`hitEnemyTank`（MyPanel.java:260）只查 `myTank.shot` 最新一发，旧子弹不参与命中判定，连发时只有最后一发有效——也是待修项。
+
+**关联**
+
+未提交；诊断对象：`src/tankGame/EnemyTank.java`、`src/tankGame/MyPanel.java`（hitMyTank/hitTank）
+
+---
+
+## 修复「敌方打不中我方坦克」 · 2026-10-28 16:13
+
+**需求**
+
+让敌方子弹真的能打中我方坦克，并且被打中要有表现（确认方案：爆炸后消失）。接上一条诊断。
+
+**改动**
+
+- `src/tankGame/EnemyTank.java`
+  - 移动 switch 每个 case 补 `break`，消除 fall-through（原来每次循环实际走一整条 L 形路线）
+  - 固定 30 步改为随机 10~40 步（`int steps = 10 + (int)(Math.random() * 31)`），破掉 150px 固定网格
+  - case 3 出膛点 `getX() + 60`（车尾）→ `getX()`（炮口）
+- `src/tankGame/MyPanel.java`
+  - `paint`：myTank 加 `isLive` 判断，死后不再绘制；`myTank.shots` 由 for-each 边遍历边 remove（会抛 ConcurrentModificationException）改成下标遍历，与敌方子弹那段一致
+  - `keyPressed` 开头加 `!myTank.isLive` 直接 return，死后不再响应操作
+  - `hitTank`：参数 `enermy` 改 `target`（敌我通用），删掉 `enemyTanks.remove(enermy)`——我方不在 enemyTanks 里，这句是空操作且语义错误；移除敌方归 `hitEnemyTank` 负责
+  - `hitEnemyTank` 重写：遍历 `myTank.shots` 全部在飞子弹（原来只查 `myTank.shot` 最新一发，旧子弹打中不算数），命中后把敌方移出 enemyTanks
+
+**设计原因 / 权衡**
+
+- fall-through 是「打不中」的主因：每段固定 30 步 × 5px = 150px，且 case 3 的 `moveLeft` 永远最后执行，敌方开火点的 x 只会向左漂、y 向下沉，锁死在稀疏网格上正好绕开玩家。只补 break 不够——开火点仍在 150px 网格上（从 100/200/300 出发只有 x=250 那条列对得上出生点），所以再加随机步长让开火点铺满地图。
+- 我方死亡做成「爆炸后消失」（按确认的需求）：paint 不画 + 按键不响应；不做 Game Over 画面/命数制。死后 `hitMyTank` 里 `if(myTank.isLive ...)` 跳过后续子弹是正确语义（消失的坦克不该再中弹），不再是之前那种「画面上还活着却永久免疫」。
+- `hitTank` 收敛成纯「判中 → 击杀 → 爆炸」，不动任何列表：敌我共用一份 AABB，谁的列表谁管，避免再把 myTank 当敌方 remove。
+- `hitEnemyTank` 改查全部子弹：`myTank.shot` 只是最后一发的指针，连发时旧子弹明明画在屏幕上穿过敌人却不算命中。
+- 顺手修掉 paint 里 myTank.shots 的 for-each + remove：边遍历边移除会抛 CME 中断整帧绘制（后面的敌方子弹、爆炸都画不出来），改成和下方敌方子弹一致的下标遍历。
+
+**验证**
+
+javac 21 编译 `src/tankGame/*` 全部通过；无 GUI 模拟（临时 HitTest，跑完即删）：
+
+1. 子弹正对 myTank → 判中（链路回归）。
+2. 开局三发子弹 vs 静止 (250,400)：打不中——这三发出膛点固定、不经过出生点，预期内。
+3. 修复后的移动逻辑模拟 6000 次开火：能碰到 (250,400) 的 **173 次（2%）**（修复前 0 次）；开火点 x 抽样 [118, 100, 53, 95, 205, 348, 330, 190, 88, 130, 240, 160]，已铺满地图。
+4. 旧子弹命中敌方：判中并移出列表（修复前只认最新一发）。
+5. 被击中后：isLive=false、生成 1 个爆炸、enemyTanks 不受影响；死后再中弹不再判中。
+
+未做 GUI 实机回归，建议跑一局确认手感（单发命中概率约 2%，站着不动 1~2 分钟内会被打中）。
+
+**遗留 / 待办**
+
+- 跨线程用 Vector 没有同步：`hitMyTank`/`hitEnemyTank` 的 size()+get(j) 与 paint 里的 remove 存在 TOCTOU，极端时序下可能 AIOOBE 打死 MyPanel 的 run 线程（之后所有命中判定停摆）。要做快照遍历或加锁。
+- `paint` 里 `for (EnemyTank o : enemyTanks)` 与 run 线程的 `enemyTanks.remove` 并发，可能 CME 中断整帧绘制（画面偶发闪）。同样需要同步/快照。
+- Bomb 生成在包围盒左上角，60x60 爆炸图对 40x60 的坦克没对中（上上条遗留，本次未动）。
+- `MyTank.shot` 字段现在没人读了（只剩 keyPressed 里注释掉的引用），可清理。
+- 出膛点 y 偏移两套并存（MyTank 用 +20、EnemyTank 用 +18），40/60/5 魔法数也散落在 hitTank/drawTank/shot() 各处，应收敛成常量。
+
+**关联**
+
+未提交；工作区改动：`src/tankGame/EnemyTank.java`、`src/tankGame/MyPanel.java`；接上一条「诊断『敌方打不中我方坦克』」。

@@ -15,18 +15,19 @@ import java.util.Vector;
  * @since 2026/10/23 17:46
  */
 public class MyPanel extends JPanel implements KeyListener,Runnable {
-    MyTank myTank = null;
+    static MyTank myTank = null;
     static Vector<EnemyTank> enemyTanks = new Vector<>();
     static Vector<Bomb> bombs = new Vector<>();
     Image image01 = null;
     Image image02 = null;
     Image image03 = null;
     public  MyPanel (){
-        myTank = new MyTank(100, 100, 0);
+        myTank = new MyTank(250, 400, 0);
         for (int i = 0; i < 3; i++){
             enemyTanks.add(new EnemyTank(100 + i * 100, 10, 2));
-            Shot shot = new Shot(enemyTanks.get(enemyTanks.size()-1).getX() + 18, enemyTanks.get(enemyTanks.size()-1).getY() + 60, enemyTanks.get(enemyTanks.size()-1).getDirect());
-            enemyTanks.get(enemyTanks.size()-1).shots.add(shot);
+            Shot shot = new Shot(enemyTanks.get(i).getX() + 18, enemyTanks.get(i).getY() + 60, enemyTanks.get(i).getDirect());
+            enemyTanks.get(i).shots.add(shot);
+            new Thread(enemyTanks.get(i)).start();
             new Thread(shot).start();
         }
 
@@ -35,11 +36,19 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
     public void paint(Graphics g){
         super.paint(g);
         g.setColor(new Color(0x2B, 0x2F, 0x2B));
-        g.fillRect(0,0,1000,750);
-        drawTank(myTank.getX(), myTank.getY(), g, myTank.getDirect(), 1);
-        if(myTank.shot != null && myTank.shot.isLive){
-            g.fill3DRect(myTank.shot.x, myTank.shot.y, 5, 5, true);
+        g.fillRect(0,0,500,500);
+        if(myTank.isLive){
+            drawTank(myTank.getX(), myTank.getY(), g, myTank.getDirect(), 1);
         }
+        for (int i = 0; i < myTank.shots.size(); i++) {
+            Shot shot = myTank.shots.get(i);
+            if(shot != null && shot.isLive){
+                g.fill3DRect(shot.x, shot.y, 5, 5, false);
+            }else{
+                myTank.shots.remove(shot);
+            }
+        }
+
 
         for (int i = 0; i < bombs.size(); i++) {
             Bomb bomb = bombs.get(i);
@@ -218,26 +227,61 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         return new Color(r, g, bl);
     }
     /**
-     * 判断子弹是否击中敌方坦克（矩形重叠）。
+     * 判断子弹是否命中坦克（矩形重叠），敌我通用：命中即击杀并生成爆炸。
      * <p>
      * 坦克包围盒随朝向变化：上/下 40x60，左/右 60x40；子弹是 5x5 的小方块。
      * 两个轴都相交才算命中 —— 只查垂直于行进方向的一个轴，
      * 会让同一行/列上隔多远的子弹都隔空命中。朝向只决定包围盒宽高。
+     * <p>
+     * 只负责判中和击杀，不动任何坦克列表：我方坦克不在 enemyTanks 里，
+     * 把敌方移出列表是 {@link #hitEnemyTank()} 的事。
      *
      * @param s      子弹
-     * @param enermy 敌方坦克
+     * @param target 被打的坦克（敌我均可）
      */
-    public static void hitTank(Shot s, EnemyTank enermy){
-        boolean upDown = enermy.getDirect() == 0 || enermy.getDirect() == 2;
+    public static void hitTank(Shot s, Tank target){
+        boolean upDown = target.getDirect() == 0 || target.getDirect() == 2;
         int w = upDown ? 40 : 60;
         int h = upDown ? 60 : 40;
-        if (s.x + 5 > enermy.getX() && s.x < enermy.getX() + w
-                && s.y + 5 > enermy.getY() && s.y < enermy.getY() + h) {
+        if (s.x + 5 > target.getX() && s.x < target.getX() + w
+                && s.y + 5 > target.getY() && s.y < target.getY() + h) {
             s.isLive = false;
-            enermy.isLive = false;
-            enemyTanks.remove(enermy);
-            Bomb bomb = new Bomb(enermy.getX(), enermy.getY());
+            target.isLive = false;
+            Bomb bomb = new Bomb(target.getX(), target.getY());
             bombs.add(bomb);
+        }
+    }
+    public static void hitMyTank(){
+        for (int i = 0; i < enemyTanks.size(); i++) {
+            EnemyTank enemyTank = enemyTanks.get(i);
+            for (int j = 0; j < enemyTank.shots.size(); j++) {
+                Shot shot = enemyTank.shots.get(j);
+               if(myTank.isLive && shot.isLive){
+                   hitTank(shot, myTank);
+               }
+            }
+        }
+    }
+    /**
+     * 我方所有在飞的子弹 vs 敌方坦克；命中后把敌方从 enemyTanks 移除。
+     * 不能只查 {@link MyTank#shot}：那只是最后一发，先前打出去的子弹同样要算数。
+     */
+    public static void hitEnemyTank(){
+        for (int i = 0; i < myTank.shots.size(); i++) {
+            Shot shot = myTank.shots.get(i);
+            if(shot == null || !shot.isLive){
+                continue;
+            }
+            for (int j = 0; j < enemyTanks.size(); j++) {
+                EnemyTank enemyTank = enemyTanks.get(j);
+                if(!enemyTank.isLive || !shot.isLive){
+                    continue;
+                }
+                hitTank(shot, enemyTank);
+                if(!enemyTank.isLive){
+                    enemyTanks.remove(enemyTank);
+                }
+            }
         }
     }
     @Override
@@ -247,6 +291,9 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
+        if(!myTank.isLive){
+            return; // 坦克已被击毁（爆炸后消失），不再响应操作
+        }
         if(keyEvent.getKeyCode() == KeyEvent.VK_W){
             myTank.moveUp();
         } else if (keyEvent.getKeyCode() == KeyEvent.VK_S) {
@@ -256,7 +303,9 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
         } else if (keyEvent.getKeyCode() == KeyEvent.VK_D) {
             myTank.moveRight();
         } else if (keyEvent.getKeyCode() == KeyEvent.VK_J) {
-            myTank.shot();
+//            if(myTank.shot == null || !myTank.shot.isLive){
+                myTank.shot();
+//            }
         }
         this.repaint();
     }
@@ -273,14 +322,8 @@ public class MyPanel extends JPanel implements KeyListener,Runnable {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if(myTank.shot != null && myTank.shot.isLive){
-                for (int i = 0; i < enemyTanks.size(); i++) {
-                    if(enemyTanks.get(i).isLive && myTank.shot.isLive){
-                        hitTank(myTank.shot, enemyTanks.get(i));
-                    }
-
-                }
-            }
+            hitEnemyTank();
+            hitMyTank();
             this.repaint();
         }
     }
