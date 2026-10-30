@@ -340,3 +340,28 @@ javac 21 编译 `src/tankGame/*` 全部通过；无 GUI 模拟（临时 HitTest�
 **关联**
 
 未提交；工作区改动：`src/tankGame/EnemyTank.java`、`src/tankGame/MyPanel.java`；接上一条「诊断『敌方打不中我方坦克』」。
+
+---
+
+## FileCreate 的 @Test 方法去掉 static · 2026-10-28
+
+`src/com/ioStream/FileCreate.java` 的 `create02()` 加了 `@Test` 但 IDEA 行号旁没有绿色启动键：JUnit 要求测试方法是**实例方法**（非 static、void、无参），JUnit 运行时先 new 出类实例再反射调用，static 方法不被识别为测试方法。去掉 `static` 后 gutter 启动键出现。
+
+---
+
+## 诊断 JUnit 启动崩溃 ClassCircularityError / hs_err 原生 OOM · 2026-10-29
+
+**需求**：运行 `FileCreate.copyImg` 时控制台报 `Exception in thread "main" java.lang.ClassCircularityError: java/lang/WeakPairMap$Pair$Weak`（堆栈在 `Proxy$ProxyBuilder.getDynamicModule` → `Modules.addReads` → `WeakPairMap.putIfAbsent`），项目根目录同时出现 `hs_err_pid16152.log`。
+
+**改动**：本次只诊断，未改代码/配置。
+
+**设计原因 / 权衡**：根因不是测试代码，而是 **Windows 系统提交内存（commit / 页面文件）耗尽**。hs_err 显示 `TotalPageFile 36756M, AvailPageFile 229M`（物理内存仅剩 5.1G / 28G），JVM 启动 0.23 秒时 mmap G1 虚拟空间 469MB 失败直接崩溃（JDK 21.0.3，按 28G 内存的人体工学默认预留了约 7G 堆）。`ClassCircularityError` 是次生症状：IDEA 调试器 captureAgent 在 JVM 早期启动阶段触发动态代理生成（命令行带 debugger-agent + async stack trace 相关参数），此时核心类 `WeakPairMap$Pair$Weak` 在内存申请失败的破损状态下加载，报成类循环错误——测试方法体根本没执行。已确认 `D:\Text\1.png`、`E:\` 均存在，排除业务代码与路径问题。
+
+**验证**：读 hs_err 的 Memory 段确认提交内存仅剩 229M；`java -version` 正常（JDK 安装未损坏）；`ls /d/Text/1.png`、`ls /e/` 均成功。
+
+**遗留 / 待办**：
+
+- 处理建议（按顺序）：关占内存的程序/重启 → 调大 Windows 页面文件（系统管理或更大）→ IDEA Run Configuration 加 `-Xmx512m` 限制堆预留 → 先用 Run（非 Debug）跑以排除 captureAgent；仍复现再升级 JDK 21（21.0.3 偏旧）或关闭 IDEA async stack traces。
+- `hs_err_pid16152.log` 是崩溃产物，不应提交，可删除（当前未跟踪）。
+
+**关联**：无 commit；崩溃命令为 JUnitStarter 运行 `com.ioStream.FileCreate,copyImg`。

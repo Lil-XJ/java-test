@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="feat(game): 添加坦克游戏核心功能和绘图练习模块&#10;&#10;- 实现 BallMove 小球移动绘制功能，支持键盘方向键控制&#10;- 添加 DrawCircle 图片绘制功能，修复图片加载 NPE 问题&#10;- 创建 Tank 坦克图形绘制类，使用 Graphics2D 绘制 2D 坦克&#10;- 实现完整的坦克游戏框架，包括 MyPanel 游戏面板和坦克绘制逻辑&#10;- 添加 EnemyTank 敌方坦克类和 Shot 子弹射击功能&#10;- 实现 hitTank 坦克碰撞检测逻辑，修复单轴命中判定问题&#10;- 添加 Bomb 爆炸效果类和爆炸动画显示&#10;- 创建线程练习作业">
-      <change afterPath="$PROJECT_DIR$/src/com/ioStream/FileCreate.java" afterDir="false" />
+    <list default="true" id="c4de3df3-12f3-4ec2-8581-45ae617a8ac3" name="Changes" comment="fix(tankGame): 修复坦克游戏中的多个问题并优化游戏体验&#10;&#10;- 修复敌方坦克移动逻辑中的fall-through问题，添加break语句避免L形路线&#10;- 实现敌方坦克随机步长移动（10-40步），破解固定网格避免绕开玩家&#10;- 修正敌方坦克朝左开火时出膛点位置错误（从车尾改为炮口）&#10;- 添加我方坦克被击中后的视觉表现（不再绘制且停止响应操作）&#10;- 重构hitTank方法实现敌我通用的碰撞检测逻辑，修复语义错误&#10;- 修复hitEnemyTank方法使其检查我方全部在飞子弹而非仅最新一发&#10;- 调整游戏窗口尺寸从400x300到700x700以匹配">
+      <change afterPath="$PROJECT_DIR$/src/com/ioStream/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dog.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/claudeCodeTabState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dev-log/DEV_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/dev-log/DEV_LOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/EnemyTank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/MyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/MyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/MyTank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/Tank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankGame/TankGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankGame/TankGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ioStream/FileCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ioStream/FileCreate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,86 +55,99 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ChangeChar.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Constructor.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Fibonacci.executor&quot;: &quot;Run&quot;,
-    &quot;Application.IntDetail.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Maze.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MonkeyEatPeach.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ObjectTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SnakeGame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TowerOfHanoi.executor&quot;: &quot;Run&quot;,
-    &quot;Application.YangHui.executor&quot;: &quot;Run&quot;,
-    &quot;Application.helloWorld.executor&quot;: &quot;Run&quot;,
-    &quot;Application.input.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.variableDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.Homework01.testList.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/desktop/java-test/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;qoder.settings.profile.models&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.ArrayExercise01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.BallMove (1).executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.BallMove (2).executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.BallMove (3).executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.BallMove.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.CollectionExercise01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Constructor.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Debug01.executor&quot;: &quot;Debug&quot;,
-    &quot;应用程序.DrawCircle.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Enumeration.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Exception01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Extend.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Generic (1).executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Generic.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework02.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework03.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework04.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework05.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework06.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework07.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Homework08.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.InnerClass.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Interface01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Map_.executor&quot;: &quot;Debug&quot;,
-    &quot;应用程序.Maze.executor&quot;: &quot;Debug&quot;,
-    &quot;应用程序.Override.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.SmallChangeSys.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.SmallChangeSysAPP.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.Tank.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.TankGame.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.ThreadExercise.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.ThreadMethod.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.WorkManagement.executor&quot;: &quot;Debug&quot;,
-    &quot;应用程序.Wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.com.enumeration.Homework03.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.com.generic_.Homework01.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.hashSetStructure.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ChangeChar.executor": "Run",
+    "Application.Constructor.executor": "Run",
+    "Application.Fibonacci.executor": "Run",
+    "Application.IntDetail.executor": "Run",
+    "Application.Maze.executor": "Run",
+    "Application.MonkeyEatPeach.executor": "Run",
+    "Application.ObjectTest.executor": "Run",
+    "Application.SnakeGame.executor": "Run",
+    "Application.TowerOfHanoi.executor": "Run",
+    "Application.YangHui.executor": "Run",
+    "Application.helloWorld.executor": "Run",
+    "Application.input.executor": "Run",
+    "Application.test.executor": "Run",
+    "Application.variableDemo.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.FileCreate.ObjectInStream.executor": "Run",
+    "JUnit.FileCreate.ObjectOutStream.executor": "Run",
+    "JUnit.FileCreate.bufferRead.executor": "Run",
+    "JUnit.FileCreate.bufferWrite.executor": "Run",
+    "JUnit.FileCreate.copy.executor": "Run",
+    "JUnit.FileCreate.copyImg.executor": "Run",
+    "JUnit.FileCreate.create02.executor": "Run",
+    "JUnit.FileCreate.readFile01.executor": "Run",
+    "JUnit.FileCreate.writeFile.executor": "Run",
+    "JUnit.Homework01.create01.executor": "Run",
+    "JUnit.Homework01.create02.executor": "Run",
+    "JUnit.Homework01.create03.executor": "Run",
+    "JUnit.Homework01.testList.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/desktop/java-test/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "qoder.settings.profile.models",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.ArrayExercise01.executor": "Run",
+    "应用程序.BallMove (1).executor": "Run",
+    "应用程序.BallMove (2).executor": "Run",
+    "应用程序.BallMove (3).executor": "Run",
+    "应用程序.BallMove.executor": "Run",
+    "应用程序.CollectionExercise01.executor": "Run",
+    "应用程序.Constructor.executor": "Run",
+    "应用程序.Debug01.executor": "Debug",
+    "应用程序.DrawCircle.executor": "Run",
+    "应用程序.Enumeration.executor": "Run",
+    "应用程序.Exception01.executor": "Run",
+    "应用程序.Extend.executor": "Run",
+    "应用程序.FileCreate.executor": "Run",
+    "应用程序.Generic (1).executor": "Run",
+    "应用程序.Generic.executor": "Run",
+    "应用程序.Homework01.executor": "Run",
+    "应用程序.Homework02.executor": "Run",
+    "应用程序.Homework03.executor": "Run",
+    "应用程序.Homework04.executor": "Run",
+    "应用程序.Homework05.executor": "Run",
+    "应用程序.Homework06.executor": "Run",
+    "应用程序.Homework07.executor": "Run",
+    "应用程序.Homework08.executor": "Run",
+    "应用程序.InnerClass.executor": "Run",
+    "应用程序.Interface01.executor": "Run",
+    "应用程序.Map_.executor": "Debug",
+    "应用程序.Maze.executor": "Debug",
+    "应用程序.Override.executor": "Run",
+    "应用程序.SmallChangeSys.executor": "Run",
+    "应用程序.SmallChangeSysAPP.executor": "Run",
+    "应用程序.Tank.executor": "Run",
+    "应用程序.TankGame.executor": "Run",
+    "应用程序.ThreadExercise.executor": "Run",
+    "应用程序.ThreadMethod.executor": "Run",
+    "应用程序.WorkManagement.executor": "Debug",
+    "应用程序.Wrapper.executor": "Run",
+    "应用程序.com.enumeration.Homework03.executor": "Run",
+    "应用程序.com.generic_.Homework01.executor": "Run",
+    "应用程序.hashSetStructure.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\desktop\java-test\src" />
@@ -149,86 +158,101 @@
       <recent name="tankGame" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.TankGame">
-    <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thread.Homework01" />
+  <component name="RunManager" selected="JUnit.Homework01.create03">
+    <configuration name="FileCreate.ObjectInStream" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.thread.*" />
+          <option name="PATTERN" value="com.ioStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ioStream" />
+      <option name="MAIN_CLASS_NAME" value="com.ioStream.FileCreate" />
+      <option name="METHOD_NAME" value="ObjectInStream" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thread.Homework02" />
+    <configuration name="FileCreate.ObjectOutStream" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.thread.*" />
+          <option name="PATTERN" value="com.ioStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ioStream" />
+      <option name="MAIN_CLASS_NAME" value="com.ioStream.FileCreate" />
+      <option name="METHOD_NAME" value="ObjectOutStream" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TankGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tankGame.TankGame" />
+    <configuration name="Homework01.create01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tankGame.*" />
+          <option name="PATTERN" value="com.ioStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ioStream" />
+      <option name="MAIN_CLASS_NAME" value="com.ioStream.Homework01" />
+      <option name="METHOD_NAME" value="create01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thread.ThreadExercise" />
+    <configuration name="Homework01.create02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.thread.*" />
+          <option name="PATTERN" value="com.ioStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ioStream" />
+      <option name="MAIN_CLASS_NAME" value="com.ioStream.Homework01" />
+      <option name="METHOD_NAME" value="create02" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thread.ThreadMethod" />
+    <configuration name="Homework01.create03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.thread.*" />
+          <option name="PATTERN" value="com.ioStream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.ioStream" />
+      <option name="MAIN_CLASS_NAME" value="com.ioStream.Homework01" />
+      <option name="METHOD_NAME" value="create03" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="应用程序.Homework01" />
-      <item itemvalue="应用程序.Homework02" />
-      <item itemvalue="应用程序.ThreadExercise" />
-      <item itemvalue="应用程序.ThreadMethod" />
-      <item itemvalue="应用程序.TankGame" />
+      <item itemvalue="JUnit.Homework01.create01" />
+      <item itemvalue="JUnit.Homework01.create02" />
+      <item itemvalue="JUnit.Homework01.create03" />
+      <item itemvalue="JUnit.FileCreate.ObjectInStream" />
+      <item itemvalue="JUnit.FileCreate.ObjectOutStream" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.TankGame" />
-        <item itemvalue="应用程序.Homework02" />
-        <item itemvalue="应用程序.Homework01" />
-        <item itemvalue="应用程序.ThreadExercise" />
-        <item itemvalue="应用程序.ThreadMethod" />
+        <item itemvalue="JUnit.Homework01.create03" />
+        <item itemvalue="JUnit.Homework01.create02" />
+        <item itemvalue="JUnit.Homework01.create01" />
+        <item itemvalue="JUnit.FileCreate.ObjectInStream" />
+        <item itemvalue="JUnit.FileCreate.ObjectOutStream" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +330,8 @@
     <MESSAGE value="feat(Homework01): 实现列表倒序遍历功能&#10;&#10;- 将正序 for-each 循环改为按索引倒序遍历&#10;- 使用 for 循环从 list.size() - 1 开始递减到 0&#10;- 通过 list.get(i) 获取元素保持原有打印逻辑&#10;- 避免修改原列表顺序，仅改变输出顺序&#10;- 保持 ArrayList 随机访问特性实现 O(1) 时间复杂度&#10;- 维持原始类型 Object" />
     <MESSAGE value="chore(IDE): 更新IDE配置文件中的会话ID和提交记录&#10;&#10;- 更新 claudeCodeTabState.xml 中的 sessionId 值&#10;- 修改 workspace.xml 中的变更列表注释为最新的提交信息&#10;- 更新 LAST_COMMIT_MESSAGE 为当前的作业练习提交内容" />
     <MESSAGE value="feat(game): 添加坦克游戏核心功能和绘图练习模块&#10;&#10;- 实现 BallMove 小球移动绘制功能，支持键盘方向键控制&#10;- 添加 DrawCircle 图片绘制功能，修复图片加载 NPE 问题&#10;- 创建 Tank 坦克图形绘制类，使用 Graphics2D 绘制 2D 坦克&#10;- 实现完整的坦克游戏框架，包括 MyPanel 游戏面板和坦克绘制逻辑&#10;- 添加 EnemyTank 敌方坦克类和 Shot 子弹射击功能&#10;- 实现 hitTank 坦克碰撞检测逻辑，修复单轴命中判定问题&#10;- 添加 Bomb 爆炸效果类和爆炸动画显示&#10;- 创建线程练习作业" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(game): 添加坦克游戏核心功能和绘图练习模块&#10;&#10;- 实现 BallMove 小球移动绘制功能，支持键盘方向键控制&#10;- 添加 DrawCircle 图片绘制功能，修复图片加载 NPE 问题&#10;- 创建 Tank 坦克图形绘制类，使用 Graphics2D 绘制 2D 坦克&#10;- 实现完整的坦克游戏框架，包括 MyPanel 游戏面板和坦克绘制逻辑&#10;- 添加 EnemyTank 敌方坦克类和 Shot 子弹射击功能&#10;- 实现 hitTank 坦克碰撞检测逻辑，修复单轴命中判定问题&#10;- 添加 Bomb 爆炸效果类和爆炸动画显示&#10;- 创建线程练习作业" />
+    <MESSAGE value="fix(tankGame): 修复坦克游戏中的多个问题并优化游戏体验&#10;&#10;- 修复敌方坦克移动逻辑中的fall-through问题，添加break语句避免L形路线&#10;- 实现敌方坦克随机步长移动（10-40步），破解固定网格避免绕开玩家&#10;- 修正敌方坦克朝左开火时出膛点位置错误（从车尾改为炮口）&#10;- 添加我方坦克被击中后的视觉表现（不再绘制且停止响应操作）&#10;- 重构hitTank方法实现敌我通用的碰撞检测逻辑，修复语义错误&#10;- 修复hitEnemyTank方法使其检查我方全部在飞子弹而非仅最新一发&#10;- 调整游戏窗口尺寸从400x300到700x700以匹配" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(tankGame): 修复坦克游戏中的多个问题并优化游戏体验&#10;&#10;- 修复敌方坦克移动逻辑中的fall-through问题，添加break语句避免L形路线&#10;- 实现敌方坦克随机步长移动（10-40步），破解固定网格避免绕开玩家&#10;- 修正敌方坦克朝左开火时出膛点位置错误（从车尾改为炮口）&#10;- 添加我方坦克被击中后的视觉表现（不再绘制且停止响应操作）&#10;- 重构hitTank方法实现敌我通用的碰撞检测逻辑，修复语义错误&#10;- 修复hitEnemyTank方法使其检查我方全部在飞子弹而非仅最新一发&#10;- 调整游戏窗口尺寸从400x300到700x700以匹配" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
